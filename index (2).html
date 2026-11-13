@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca JM</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --body-bg: lightgreen;
+      --main-bg: azure;
+      --main-cl: black;
+      --input-cl: antiquewhite;
+      --in-ltt: rgba(20, 20, 20, 0.959);
+    }
+    html.dark-mode {
+      --body-bg: black;
+      --main-bg: gray;
+      --main-cl: rgba(20, 20, 20, 0.959);
+      --input-cl: rgba(20, 20, 20, 0.959);
+      --in-ltt: white;
+    }
+
+    body {
+      background-color: var(--body-bg);
+    }
+
+    main {
+      background-color: var(--main-bg);
+      padding: 30px;
+      margin: 20px;
+      color: var(--in-ltt);
+    }
+
+    #livros {
+      background-color: antiquewhite;
+      font-size: medium;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 15px;
+    }
+
+    a {
+      color: red;
+    }
+
+    label {
+      color: var(--in-ltt);
+      background-color: var(--input-cl);
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    h2 {
+      color: var(--in-ltt);
+      margin: auto;
+      padding: 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="titulo">Um site dedicado aos leitores!</h2>
+  
+  <label>
+    <input type="checkbox" id="switch"> Modo Escuro
+  </label>
+
+  <main>
+    <h1 class="titulo">Biblioteca JM</h1>
+    <br>
+    <h3>Pesquisa</h3>
+    <input id="searchbar" type="text" name="searchbar" placeholder="Procure um livro..." onkeyup="search()">
+    <section id="livros">
+      <article class="livro" data-categoria="auto-ajuda">
+        <a href="https://drive.google.com/file/d/1tLgXmhFQzjKWEq5urWthMQ37EsZFkEaQ/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>As 48 Leis do Poder</h4></a>
+      </article>
+      <article class="livro" data-categoria="auto-ajuda">
+        <a href="https://drive.google.com/file/d/1Fu5zfNzVQXL2A2-cBpiAXZhPaatk-9es/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>33 Estratégias de Guerra</h4></a>
+      </article>
+
+      <div id="pdfContainer">
+        <article class="livro" data-categoria="auto-ajuda">
+          <a href="https://drive.google.com/file/d/1tAx39RL0vHEGz94C-0FEPel7jZawsrHO/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Dopamina - A Molécula do Desejo</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1uW3sj9NuO6w-fzZN1hg8k-4H07ZMKO0G/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Nutrição em Foco: Uma Abordagem Holística Vol. 1</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tMAHyEx57dhpkxCWdomugDKeHCgwkGwh/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>É Assim que Acaba</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tgLnJ0fe4SQImrHxvPB5jLaMylBtPUxs/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Por Odiar Você</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1uNosoVs4GRMz1_yje71PCY25MmRlgzcy/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>É Assim que Começa</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tfRADTuchKmsUdPT8phAplaWwh4AowoV/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Apocalipse</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tUEaLIhprD1TOYzNnGANCIsxBzA_VFl7/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Hiperfoco</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1udHZZN8ebRwomJXvu6rTTkQbi4hGjKm-/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Para Todas as Pessoas Intensas</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tUPz-EIx1anjL7gG0P-s31TD6Pm4KtuA/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Máquinas Elétricas e Transformadoras</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tFTAzCaiEu65vtitej9LunztgihfhYqI/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>O 14° Dalai Lama - Uma Biografia em Mangá</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1uc3lkpI9QGEQ_WjBDkJG7kxALzD3E-zE/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>O Aço Eterno</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1ubmx2mpgbo_60Gufc-m6paWmlfVBKGmg/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>O Absurdo da Incredulidade</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1uRYHBkMaveSPCuP6PkHtBan9xrS8-t48/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>O Oráculo da Noite</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tot0FstDSg5_6P6WPkIBl1TBC0YuHA3X/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Moby Dick</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1uSQzJ5oj_3bMZ42y517C2JTOfp_wwaES/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Lugar de Médico é na Cozinha</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tsoVHP10s9xXmrC0gke2MmeOpWOuaBR2/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>As Armas da Persuasão</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1u0YhWwI1TF1lmCzAQqy6FJriRsCquhTd/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Amy E. Herman - Inteligência Visual: Aprenda a Arte da Percepção e Transforme</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tZfLrX95nnyqJV_M-9XEpl4naanhyKPS/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>A Babá dos Filhos do Quarterback</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tbz02fFCVVl_exMo0T1SqgFDZTJFFu1S/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Nossa Culpa</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tKSzpD_z2ZD4Ddy6wNxqhNiNAFMRcry2/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>O Poder do Chá de Sumiço</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1takEi8HDeQ2BiMuNdUOpO0FJ4lir3-jh/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Culpa Mia</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1uZpDEQokHlY-5qvsWttUm8snWJk7W4qZ/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>O Abismo de Celina - Ariane Castelo</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1uBbAX7YmEcGQqI5ApqbB6apjhypIEGbc/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Harry Potter e a Pedra Filosofal</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tMpsWXBji7RciWcHKUL9INRGqCSrT6_8/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Em Mim Basta</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1uE9TKa9p_C75jDnZXDnPDPToYXiWcx4e/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Harry Potter e a Ordem da Fênix</h4></a>
+        </article>
+        <article class="livro">
+          <a href="https://drive.google.com/file/d/1tb0LDN_BMhQN68iMInB3tL9Q9lSZ9w76/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><h4>Culpa Tua</h4></a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function search() {
+      let input = document.getElementById('searchbar').value.toLowerCase();
+      let livros = document.getElementsByClassName('livro');
+
+      for (let i = 0; i < livros.length; i++) {
+        // Usa textContent para buscar apenas no título visível, sem pegar URLs do href
+        let titulo = livros[i].textContent.toLowerCase();
+        if (!titulo.includes(input)) {
+          livros[i].style.display = "none";
+        } else {
+          livros[i].style.display = "block";
+        }
+      }
+    }
+
+    const $html = document.querySelector('html');
+    const $checkbox = document.querySelector('#switch');
+
+    $checkbox.addEventListener('change', function() {
+      $html.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
